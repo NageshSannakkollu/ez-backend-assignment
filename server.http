@@ -1,0 +1,35 @@
+GET http://localhost:3006/ 
+###
+POST http://localhost:3006/signup
+Content-Type: application/json 
+
+{
+    "username":"Nagesh",
+    "email":"nagesh4a2@gmail.com",
+    "password":"Ghajini@1438",
+    "role":"Client User"
+}
+###
+POST  http://localhost:3006/login 
+Content-Type: application/json 
+
+{
+    "email":"nagesh4a2@gmail.com",
+    "password":"Ghajini@1438"
+}
+
+###
+GET http://localhost:3006/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhaHVsQHRlc3QuY29tIiwiaWF0IjoxNzMxODE2MjkzfQ.otBbgdVYRSDcsRD3177OY5c7FvDyN4NEtHgu2Yyo4xw
+
+###
+POST http://localhost:3006/emailverification
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5hZ2VzaDRhMkBnbWFpbC5jb20iLCJpYXQiOjE3MzE5MDcxMjZ9.ZhXPfHj7C1m9Xh6hG3tcgjEdpuyDMth8fUILasvM7Og
+{
+    "email":"nagesh4a2@gmai.com"
+}
+
+###
+GET http://localhost:3006/download/filename
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5hZ2VzaDRhMkBnbWFpbC5jb20iLCJpYXQiOjE3MzE5MDcxMjZ9.ZhXPfHj7C1m9Xh6hG3tcgjEdpuyDMth8fUILasvM7Og
