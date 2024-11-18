@@ -5,7 +5,7 @@ const app = express();
 const DBConnection = require("./config/db")
 const fileRoutes = require('./routes/fileRoutes')
 const userRouter = require("./routes/authRoutes")
-const port = 3006;
+const port = process.env.PORT || 3006;
 
 app.use(express.json())
 app.use("/uploads",express.static(path.join(__dirname,'uploads')))
